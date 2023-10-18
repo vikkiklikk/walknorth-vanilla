@@ -1,0 +1,256 @@
+@import "nav.css";
+
+
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    8. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+
+
+  body {
+    background-color: #D8E0E9;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+
+nav h1 {
+    color: black;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    
+}
+nav a:hover {
+    text-decoration: underline;
+}
+#menu ul {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+
+/* dropdown menu */
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333; /* Link color */
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Position it below the hamburger icon */
+    background-color: #fff; /* Background color for the dropdown */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+.hero-container {
+    position: relative; /* Create a positioning context for absolute positioning */
+    width: 100%; /* Ensure the container covers the viewport width */
+    max-width: 100%; /* Ensure the container doesn't exceed the image width */
+    overflow: hidden;
+    padding-top: 40.25%;
+}
+.hero-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/Fimmvorduhals_by_Nanna-Dis.webp');
+    background-size: cover; /* Cover the container while maintaining aspect ratio */
+    background-position: center center; /* Center the image */
+}
+
+.hero-container h1 {
+    position: absolute; /* Position the text relative to the container */
+    top: 30%; /* Vertically center the text */
+    left: 50%; /* Horizontally center the text */
+    transform: translate(-50%, -50%); /* Center the text precisely */
+    color: white; /* Set text color */
+    text-align: center; /* Center-align text */
+    background: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background for readability */
+    padding: 10px; /* Add padding for readability */
+}
+
+.hike-header {
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
+
+.carousel-container {
+    z-index: 2;
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex; /* Make the cards display in a row */
+    transition: transform 0.5s ease; /* Smooth sliding transition */
+    position: relative;
+}
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 260px;
+    height: 320px;
+    justify-content: center;
+    border: black solid 1px;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: #F8F8F8;
+    align-items:baseline;
+    padding: 25px;
+    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Add a smooth ease-in and ease-out transition for the hover effect */
+    transform: scale(1);
+}
+
+.card:hover {
+    /* Scale the card by a factor of 1.1 on hover (10% larger) */
+    transform: scale(1.1);
+}
+
+.card-inner img {
+    height: 30px;
+    justify-content: center;
+}
+.card h3 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.card-inner {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-distance {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 5px;
+
+}
+
+.card-difficulty {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 5px;
+}
+
+.card-length {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 5px;
+}
+
+.card-hero img {
+    padding-top: 20px;
+    height: 160px;
+    width: auto;
+}
+
+button {
+    cursor: pointer;
+}
+
+#prev-button {
+    position: absolute;
+    top: 105%;
+    left: 20%;
+}
+
+#next-button {
+    position: absolute;
+    top: 105%;
+    right: 20%;
+}
+
+footer {
+    background-color: #56729B;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    gap: 10px;
+
+}
+/* Media Queries */
+
+/*@media (max-width: 1024px) {
+    .hamburger-icon {
+        opacity: 1;
+}*/
+
+@media (min-width: 1921px) {
+    body {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+}
