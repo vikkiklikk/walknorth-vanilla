@@ -26,17 +26,24 @@ prevButton.addEventListener("click", () => moveCarousel(currentIndex - 1));
 nextButton.addEventListener("click", () => moveCarousel(currentIndex + 1));
 
 // Toggle hamburger menu
-const menuBtn = document.getElementById("menuBtn");
-const dropdownMenu = document.querySelector(".dropdown-menu");
+document.addEventListener('DOMContentLoaded', function() {
+    const menuBtn = document.getElementById("menuBtn");
+    const dropdownMenu = document.querySelector("#dropdown-menu");
 
-menuBtn.addEventListener("click", function() {
-    // Toggle the visibility of the dropdown menu
-    dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
-});
+    menuBtn.addEventListener("click", function() {
+        dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
+    });
 
-// Close the dropdown menu when clicking outside of it
-document.addEventListener("click", function(event) {
-    if (!dropdownMenu.contains(event.target) && event.target !== menuBtn) {
-        dropdownMenu.style.display = "none";
-    }
+    // Close the dropdown menu when clicking outside of it
+    document.addEventListener("click", function(event) {
+        if (!dropdownMenu.contains(event.target) && event.target !== menuBtn) {
+            dropdownMenu.style.display = "none";
+        }
+    });
+
+    // Close the dropdown menu when clicking on the X button
+    const closeBtn = document.querySelector(".close"); // if you use class, or use #closeBtn if you use ID
+        closeBtn.addEventListener("click", function() {
+            dropdownMenu.style.display = "none";
+        });
 });
