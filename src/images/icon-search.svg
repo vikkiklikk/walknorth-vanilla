@@ -1,1 +1,3 @@
-<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M338.29 338.29L448 448"/></svg>
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M29.3335 5.33337C42.5815 5.33337 53.3335 16.0854 53.3335 29.3334C53.3335 42.5814 42.5815 53.3334 29.3335 53.3334C16.0855 53.3334 5.3335 42.5814 5.3335 29.3334C5.3335 16.0854 16.0855 5.33337 29.3335 5.33337ZM51.9602 48.1894L59.5042 55.7307L55.7308 59.504L48.1895 51.96L51.9602 48.1894Z" fill="#353535"/>
+</svg>

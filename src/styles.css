@@ -1,6 +1,16 @@
 @import "nav.css";
 
+:root {
+  --custom-blue-2: #D8E0E9;
+  --custom-font-color: #353535;
+  --custom-logo-text: #274D83;
+  --custom-blue-1: #56729B;
+}
 
+html {
+  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Lato', sans-serif;
+}
 
 /*
   1. Use a more-intuitive box-sizing model.
@@ -53,7 +63,6 @@
 
   body {
     background-color: #D8E0E9;
-    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
 
   nav {
@@ -65,7 +74,11 @@
   }
 
 nav h1 {
-    color: black;
+    color: var(--custom-logo-text);
+    font-family: 'Bebas Neue';
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    margin-left: 0.5rem;
 }
 
 nav a {
@@ -77,11 +90,11 @@ nav a {
 nav a:hover {
     text-decoration: underline;
 }
-#menu ul {
+/*#menu ul {
     display: flex;
     list-style: none;
     gap: 10px;
-}
+}*/
 
 /* dropdown menu */
 
@@ -89,15 +102,57 @@ nav a:hover {
     display: block;
     padding: 10px;
     text-decoration: none;
-    color: #333; /* Link color */
+    color: var(--custom-font-color); /* Link color */
 }
 
 .dropdown-menu {
-    display: none;
+    /*display: none;*/
+    width: 400px;
+    height: 500px;
+
     position: absolute;
-    top: 100%; /* Position it below the hamburger icon */
-    background-color: #fff; /* Background color for the dropdown */
+    top: 0; /* Position it below the hamburger icon */
+    right: 0;
+    background-color: var(--custom-blue-2); /* Background color for the dropdown */
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    z-index: 1;
+}
+
+.close {
+  height: 50px;
+}
+
+.dropdown-menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.75rem;
+  font-family: 'Bebas Neue';
+  
+}
+
+.dropdown-menu img {
+  height: 50px;
+  margin-right: 15px;
+}
+
+
+.dropdown-menu li {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+
+.dropdown-menu button {
+  width: 170px;
+  height: 70px;
+  margin-top: 20px;
+  background-color: #A22E3E;
+  border: none;
+  border-radius: 3rem;
+  color:#F8F8F8;
+  font-size: 1.25rem;
+  font-family: 'Lato';
 }
 
 .hero-container {
@@ -231,15 +286,45 @@ button {
     right: 20%;
 }
 
-footer {
-    background-color: #56729B;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-items: center;
-    justify-content: center;
-    gap: 10px;
+.footer-div {
+  width: 100%;
+  height: 140px;
+  position: relative;
+  background-color: var(--custom-blue-1); 
+  display: flex;
+  justify-content: space-between; /* This can be space-between, center, etc., based on your design */
+   
+}
 
+.footer-icon-div {
+  margin-left: 30px; 
+  margin-right: 30px;
+  margin-top: 40px;
+}
+
+.footer-icon-div ul {
+  display: flex;
+  list-style: none;
+}
+
+.footer-icon-div li {
+  margin-right: 30px;
+}
+
+.footer-legal-info ul {
+  display: flex;
+  margin-right: 80px;
+  margin-top: 90px;
+  list-style: none;
+}
+
+.footer-legal-info li {
+  margin-right: 30px;
+}
+
+.footer-legal-info a {
+  color: #323232;
+  text-decoration: none;
 }
 /* Media Queries */
 
